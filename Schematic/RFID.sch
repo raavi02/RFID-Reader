@@ -14965,8 +14965,8 @@ Source: www.kingbright.com</description>
 <part name="JP8" library="jumper" library_urn="urn:adsk.eagle:library:252" deviceset="JP1E" device="" package3d_urn="urn:adsk.eagle:package:15455/1"/>
 <part name="R7" library="adafruit" deviceset="R-US_" device="R0603" value="0.2k"/>
 <part name="R4" library="adafruit" deviceset="R-US_" device="R0603" value="0.2k"/>
-<part name="GPIO_POWER" library="led" library_urn="urn:adsk.eagle:library:259" deviceset="LED" device="5MM" package3d_urn="urn:adsk.eagle:package:15799/2" value="16V"/>
-<part name="GPIO_5V" library="led" library_urn="urn:adsk.eagle:library:259" deviceset="LED" device="5MM" package3d_urn="urn:adsk.eagle:package:15799/2" value="16V"/>
+<part name="NOT_ENTRY" library="led" library_urn="urn:adsk.eagle:library:259" deviceset="LED" device="5MM" package3d_urn="urn:adsk.eagle:package:15799/2" value="16V"/>
+<part name="ENTRY" library="led" library_urn="urn:adsk.eagle:library:259" deviceset="LED" device="5MM" package3d_urn="urn:adsk.eagle:package:15799/2" value="16V"/>
 <part name="LS1" library="PS1240P02BT" deviceset="PS1240P02BT" device=""/>
 <part name="JP9" library="jumper" library_urn="urn:adsk.eagle:library:252" deviceset="JP2E" device="" package3d_urn="urn:adsk.eagle:package:15452/1"/>
 <part name="C1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-US" device="C0805" package3d_urn="urn:adsk.eagle:package:23617/2"/>
@@ -15069,10 +15069,10 @@ Source: www.kingbright.com</description>
 <attribute name="NAME" x="186.8424" y="114.173" size="1.778" layer="95" rot="R90"/>
 <attribute name="VALUE" x="191.643" y="114.173" size="1.778" layer="96" rot="R90"/>
 </instance>
-<instance part="GPIO_POWER" gate="G$1" x="188.722" y="127.762" smashed="yes" rot="R180">
+<instance part="NOT_ENTRY" gate="G$1" x="188.722" y="127.762" smashed="yes" rot="R180">
 <attribute name="VALUE" x="193.421" y="131.064" size="1.778" layer="96" rot="R270"/>
 </instance>
-<instance part="GPIO_5V" gate="G$1" x="178.562" y="128.778" smashed="yes" rot="R180">
+<instance part="ENTRY" gate="G$1" x="178.562" y="128.778" smashed="yes" rot="R180">
 <attribute name="VALUE" x="183.261" y="132.08" size="1.778" layer="96" rot="R270"/>
 </instance>
 <instance part="LS1" gate="G$1" x="200.66" y="119.38" smashed="yes" rot="R90">
@@ -15275,12 +15275,12 @@ Source: www.kingbright.com</description>
 </segment>
 <segment>
 <label x="178.562" y="136.398" size="1.778" layer="95" rot="R90" xref="yes"/>
-<pinref part="GPIO_5V" gate="G$1" pin="C"/>
+<pinref part="ENTRY" gate="G$1" pin="C"/>
 <wire x1="178.562" y1="133.858" x2="178.562" y2="136.398" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <label x="188.722" y="136.398" size="1.778" layer="95" rot="R90" xref="yes"/>
-<pinref part="GPIO_POWER" gate="G$1" pin="C"/>
+<pinref part="NOT_ENTRY" gate="G$1" pin="C"/>
 <wire x1="188.722" y1="132.842" x2="188.722" y2="136.398" width="0.1524" layer="91"/>
 </segment>
 <segment>
@@ -15835,7 +15835,7 @@ Source: www.kingbright.com</description>
 </net>
 <net name="N$3" class="0">
 <segment>
-<pinref part="GPIO_5V" gate="G$1" pin="A"/>
+<pinref part="ENTRY" gate="G$1" pin="A"/>
 <pinref part="R7" gate="G$1" pin="1"/>
 <wire x1="178.562" y1="126.238" x2="178.562" y2="121.793" width="0.1524" layer="91"/>
 <wire x1="178.562" y1="121.793" x2="178.943" y2="121.793" width="0.1524" layer="91"/>
@@ -15856,7 +15856,7 @@ Source: www.kingbright.com</description>
 </net>
 <net name="N$2" class="0">
 <segment>
-<pinref part="GPIO_POWER" gate="G$1" pin="A"/>
+<pinref part="NOT_ENTRY" gate="G$1" pin="A"/>
 <pinref part="R4" gate="G$1" pin="2"/>
 <wire x1="188.722" y1="125.222" x2="188.341" y2="125.222" width="0.1524" layer="91"/>
 <wire x1="188.341" y1="125.222" x2="188.341" y2="123.063" width="0.1524" layer="91"/>
