@@ -75,8 +75,8 @@ all: main-build
 main-build: RFID_v2.elf secondary-outputs
 
 # Tool invocations
-RFID_v2.elf RFID_v2.map: $(OBJS) $(USER_OBJS) E:\Academics_3rd_year\6th_sem\EE344\RFID-Reader\Code\RFID_v2\STM32F103RBTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-g++ -o "RFID_v2.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m3 -T"E:\Academics_3rd_year\6th_sem\EE344\RFID-Reader\Code\RFID_v2\STM32F103RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RFID_v2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+RFID_v2.elf RFID_v2.map: $(OBJS) $(USER_OBJS) E:\Academics\Semester6\EE344\Code\Github\RFID-Reader\Code\RFID_v2\STM32F103RBTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-g++ -o "RFID_v2.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m3 -T"E:\Academics\Semester6\EE344\Code\Github\RFID-Reader\Code\RFID_v2\STM32F103RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RFID_v2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

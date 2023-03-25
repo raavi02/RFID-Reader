@@ -356,7 +356,7 @@ int main(void)
    			rfid_gain = 2;									//Default to a gain value of 2 (g=500 - this is default).  Permitted values are 0, 1, 2 or 3.
 
    			//SET_CONFIG_PAGE page=0x3 data=0x0 (DISLP1=0, DISSMARTCOMP=0, FSEL=00[4MHz osc])
-   			rfid_tx_rx_byte(0x70, 0);
+   			rfid_tx_rx_byte(0x73, 0);
 
    			//SET_CONFIG_PAGE page=0x0 data=0xB (GAIN=##, FILTERH=1, FILTERL=1)
    			tx_data = 0x43 | (rfid_gain << 2);
@@ -384,7 +384,7 @@ int main(void)
    				//----- READ TAG 1 -----
 
    				//SET_CONFIG_PAGE page=0x3 data=0x0 (DISLP1=0, DISSMARTCOMP=0, FSEL=00[4MHz osc])
-   				rfid_tx_rx_byte(0x70, 0);
+   				rfid_tx_rx_byte(0x73, 0);
 
    				//SET_CONFIG_PAGE page=0x0 data=0xB (GAIN=##, FILTERH=1, FILTERL=1)
    				tx_data = 0x43 | (rfid_gain << 2);

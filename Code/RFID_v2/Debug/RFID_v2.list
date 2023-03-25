@@ -39,11 +39,11 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING, OCTETS
  17 .debug_line   0000bb2d  00000000  00000000  00043ec7  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 18 .debug_str    00086359  00000000  00000000  0004f9f4  2**0
+ 18 .debug_str    0008635e  00000000  00000000  0004f9f4  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 19 .comment      00000050  00000000  00000000  000d5d4d  2**0
+ 19 .comment      00000050  00000000  00000000  000d5d52  2**0
                   CONTENTS, READONLY
- 20 .debug_frame  000030f0  00000000  00000000  000d5da0  2**2
+ 20 .debug_frame  000030f0  00000000  00000000  000d5da4  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
 
 Disassembly of section .text:
@@ -391,10 +391,10 @@ int main(void)
  800034e:	4b7d      	ldr	r3, [pc, #500]	; (8000544 <rfid_process.0+0x244>)
  8000350:	2202      	movs	r2, #2
  8000352:	701a      	strb	r2, [r3, #0]
-   			rfid_tx_rx_byte(0x70, 0);
+   			rfid_tx_rx_byte(0x73, 0);
  8000354:	46a4      	mov	ip, r4
  8000356:	2100      	movs	r1, #0
- 8000358:	2070      	movs	r0, #112	; 0x70
+ 8000358:	2073      	movs	r0, #115	; 0x73
  800035a:	f7ff ff89 	bl	8000270 <rfid_tx_rx_byte.1>
    			tx_data = 0x43 | (rfid_gain << 2);
  800035e:	4b79      	ldr	r3, [pc, #484]	; (8000544 <rfid_process.0+0x244>)
@@ -437,10 +437,10 @@ int main(void)
  80003a4:	701a      	strb	r2, [r3, #0]
    			break;
  80003a6:	e0c4      	b.n	8000532 <rfid_process.0+0x232>
-   				rfid_tx_rx_byte(0x70, 0);
+   				rfid_tx_rx_byte(0x73, 0);
  80003a8:	46a4      	mov	ip, r4
  80003aa:	2100      	movs	r1, #0
- 80003ac:	2070      	movs	r0, #112	; 0x70
+ 80003ac:	2073      	movs	r0, #115	; 0x73
  80003ae:	f7ff ff5f 	bl	8000270 <rfid_tx_rx_byte.1>
    				tx_data = 0x43 | (rfid_gain << 2);
  80003b2:	4b64      	ldr	r3, [pc, #400]	; (8000544 <rfid_process.0+0x244>)
