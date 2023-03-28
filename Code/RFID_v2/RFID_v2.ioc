@@ -119,4 +119,4 @@ VP_TIM1_VS_ClockSourceINT.Signal=TIM1_VS_ClockSourceINT
 VP_WWDG_VS_WWDG.Mode=WWDG_Activate
 VP_WWDG_VS_WWDG.Signal=WWDG_VS_WWDG
 board=custom
-isbadioc=true
+isbadioc=false

@@ -989,52 +989,6 @@ int main(void)
   /* USER CODE END 3 */
 }
 
-void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
-{
-  if(GPIO_Pin == GPIO_PIN_4)
-  {
-    if(HAL_GPIO_ReadPin(GPIOB, GPIO_PIN_4) == GPIO_PIN_SET)
-    {
-    	rfid_sampling_rising_edge(us_since_last_rising_edge);
-    }
-  }
-}
-
-
-
-void HAL_TIM_IC_CaptureCallback(TIM_HandleTypeDef *htim)
-{
-	if (htim->Channel == HAL_TIM_ACTIVE_CHANNEL_1)
-	{
-		if (Is_First_Captured==0) // if the first rising edge is not captured
-		{
-			IC_Val1 = HAL_TIM_ReadCapturedValue(htim, TIM_CHANNEL_1); // read the first value
-			Is_First_Captured = 1;  // set the first captured as true
-		}
-
-		else   // If the first rising edge is captured, now we will capture the second edge
-		{
-			IC_Val2 = HAL_TIM_ReadCapturedValue(htim, TIM_CHANNEL_1);  // read second value
-
-			if (IC_Val2 > IC_Val1)
-			{
-				Difference = IC_Val2-IC_Val1;
-			}
-
-			else if (IC_Val1 > IC_Val2)
-			{
-				Difference = (0xffffffff - IC_Val1) + IC_Val2;
-			}
-
-			float refClock = TIMCLOCK/(PRESCALAR);
-
-			frequency = refClock/Difference;
-			us_since_last_rising_edge = 1/frequency;
-			__HAL_TIM_SET_COUNTER(htim, 0);  // reset the counter
-			Is_First_Captured = 0; // set it back to false
-		}
-	}
-}
 /**
   * @brief System Clock Configuration
   * @retval None
@@ -1286,8 +1240,6 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
-  HAL_NVIC_SetPriority(EXTI4_IRQn, 0, 0);
-  HAL_NVIC_EnableIRQ(EXTI4_IRQn);
 
 }
 

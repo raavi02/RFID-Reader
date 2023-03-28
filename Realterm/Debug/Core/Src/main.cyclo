@@ -1,0 +1,16 @@
+main.c:109:9:rfid_read_tag	1
+main.c:76:5:main	4
+main.c:118:14:rfid_get_read_tag_result	4
+main.c:131:12:rfid_tx_rx_byte	2
+main.c:144:11:rfid_start_read_tag	1
+main.c:151:13:rfid_end_read_tag	1
+main.c:320:16:rfid_process	14
+main.c:1004:6:SystemClock_Config	3
+main.c:1045:13:MX_SPI1_Init	2
+main.c:1085:13:MX_TIM1_Init	4
+main.c:1132:13:MX_USART2_UART_Init	5
+main.c:1178:13:MX_DMA_Init	1
+main.c:1197:13:MX_GPIO_Init	1
+main.c:1227:6:HAL_GPIO_EXTI_Callback	3
+main.c:1241:6:HAL_TIM_IC_CaptureCallback	5
+main.c:1281:6:Error_Handler	1

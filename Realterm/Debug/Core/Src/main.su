@@ -1,0 +1,16 @@
+../Core/Src/main.c:109:9:rfid_read_tag	16	static
+../Core/Src/main.c:76:5:main	16	static
+../Core/Src/main.c:118:14:rfid_get_read_tag_result	16	static
+../Core/Src/main.c:131:12:rfid_tx_rx_byte	24	static
+../Core/Src/main.c:144:11:rfid_start_read_tag	24	static
+../Core/Src/main.c:151:13:rfid_end_read_tag	16	static
+../Core/Src/main.c:320:16:rfid_process	32	static
+../Core/Src/main.c:1004:6:SystemClock_Config	88	static
+../Core/Src/main.c:1045:13:MX_SPI1_Init	8	static
+../Core/Src/main.c:1085:13:MX_TIM1_Init	40	static
+../Core/Src/main.c:1132:13:MX_USART2_UART_Init	8	static
+../Core/Src/main.c:1178:13:MX_DMA_Init	16	static
+../Core/Src/main.c:1197:13:MX_GPIO_Init	40	static
+../Core/Src/main.c:1227:6:HAL_GPIO_EXTI_Callback	16	static
+../Core/Src/main.c:1241:6:HAL_TIM_IC_CaptureCallback	24	static
+../Core/Src/main.c:1281:6:Error_Handler	4	static,ignoring_inline_asm
